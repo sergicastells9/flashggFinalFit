@@ -45,6 +45,7 @@ globalReplacementMap["tutorial"]["procRVMap"]["EEEB_highR9highR9"] = "GG2H"
 globalReplacementMap["tutorial"]["procRVMap"]["EEEB_highR9lowR9"] = "GG2H"
 globalReplacementMap["tutorial"]["procRVMap"]["EEEB_lowR9highR9"] = "GG2H"
 globalReplacementMap["tutorial"]["procRVMap"]["EEEE_incl"] = "GG2H"
+globalReplacementMap["tutorial"]["procRVMap"]["NOTAG"] = "NOTAG"
 globalReplacementMap['tutorial']['catRVMap'] = od()
 globalReplacementMap["tutorial"]["catRVMap"]["EBEB_highR9highR9"] = "EBEB_highR9highR9"
 globalReplacementMap["tutorial"]["catRVMap"]["EBEB_highR9lowR9"] = "EBEB_highR9lowR9"
@@ -56,6 +57,7 @@ globalReplacementMap["tutorial"]["catRVMap"]["EEEB_highR9highR9"] = "EEEB_highR9
 globalReplacementMap["tutorial"]["catRVMap"]["EEEB_highR9lowR9"] = "EEEB_highR9lowR9"
 globalReplacementMap["tutorial"]["catRVMap"]["EEEB_lowR9highR9"] = "EEEB_lowR9highR9"
 globalReplacementMap["tutorial"]["catRVMap"]["EEEE_incl"] = "EEEE_incl"
+globalReplacementMap["tutorial"]["catRVMap"]["NOTAG"] = "NOTAG"
 
 
 # STXS analysis

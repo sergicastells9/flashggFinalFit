@@ -35,6 +35,26 @@ globalXSBRMap['tutorial'] = od()
 globalXSBRMap['tutorial']['decay'] = {'mode':'hgg'}
 globalXSBRMap['tutorial']['GG2H'] = {'mode':'constant', 'factor':51.96}
 globalXSBRMap['tutorial']['VBF'] = {'mode':'constant', 'factor':4.067}
+globalXSBRMap['tutorial']['Signal_15_GeV_preEE'] = {'mode':'constant', 'factor':51.96}
+globalXSBRMap['tutorial']['Signal_20_GeV_preEE'] = {'mode':'constant', 'factor':51.96}
+globalXSBRMap['tutorial']['Signal_25_GeV_preEE'] = {'mode':'constant', 'factor':51.96}
+globalXSBRMap['tutorial']['Signal_30_GeV_preEE'] = {'mode':'constant', 'factor':51.96}
+globalXSBRMap['tutorial']['Signal_35_GeV_preEE'] = {'mode':'constant', 'factor':51.96}
+globalXSBRMap['tutorial']['Signal_40_GeV_preEE'] = {'mode':'constant', 'factor':51.96}
+globalXSBRMap['tutorial']['Signal_45_GeV_preEE'] = {'mode':'constant', 'factor':51.96}
+globalXSBRMap['tutorial']['Signal_50_GeV_preEE'] = {'mode':'constant', 'factor':51.96}
+globalXSBRMap['tutorial']['Signal_55_GeV_preEE'] = {'mode':'constant', 'factor':51.96}
+globalXSBRMap['tutorial']['Signal_60_GeV_preEE'] = {'mode':'constant', 'factor':51.96}
+globalXSBRMap['tutorial']['Signal_15_GeV_postEE'] = {'mode':'constant', 'factor':51.96}
+globalXSBRMap['tutorial']['Signal_20_GeV_postEE'] = {'mode':'constant', 'factor':51.96}
+globalXSBRMap['tutorial']['Signal_25_GeV_postEE'] = {'mode':'constant', 'factor':51.96}
+globalXSBRMap['tutorial']['Signal_30_GeV_postEE'] = {'mode':'constant', 'factor':51.96}
+globalXSBRMap['tutorial']['Signal_35_GeV_postEE'] = {'mode':'constant', 'factor':51.96}
+globalXSBRMap['tutorial']['Signal_40_GeV_postEE'] = {'mode':'constant', 'factor':51.96}
+globalXSBRMap['tutorial']['Signal_45_GeV_postEE'] = {'mode':'constant', 'factor':51.96}
+globalXSBRMap['tutorial']['Signal_50_GeV_postEE'] = {'mode':'constant', 'factor':51.96}
+globalXSBRMap['tutorial']['Signal_55_GeV_postEE'] = {'mode':'constant', 'factor':51.96}
+globalXSBRMap['tutorial']['Signal_60_GeV_postEE'] = {'mode':'constant', 'factor':51.96}
 
 # STXS analysis: add factor for bin composition
 globalXSBRMap['STXS'] = od()

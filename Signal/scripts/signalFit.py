@@ -29,7 +29,7 @@ def leave():
 
 def get_options():
   parser = OptionParser()
-  parser.add_option("--xvar", dest='xvar', default='CMS_hgg_mass', help="Observable to fit")
+  parser.add_option("--xvar", dest='xvar', default='mass_gggg', help="Observable to fit")
   parser.add_option("--inputWSDir", dest='inputWSDir', default='', help="Input flashgg WS directory")
   parser.add_option("--ext", dest='ext', default='', help="Extension")
   parser.add_option("--proc", dest='proc', default='', help="Signal process")
@@ -153,7 +153,8 @@ for mp in opt.massPoints.split(","):
   WSFileName = glob.glob("%s/output*M%s*%s.root"%(opt.inputWSDir,mp,procRVFit))[0]
   f = ROOT.TFile(WSFileName,"read")
   inputWS = f.Get(inputWSName__)
-  d = reduceDataset(inputWS.data("%s_%s_%s_%s"%(procToData(procRVFit.split("_")[0]),mp,sqrts__,catRVFit)),aset)
+  print("%s_%s_%s_%s"%(procToData(procRVFit),mp,sqrts__,catRVFit))
+  d = reduceDataset(inputWS.data("%s_%s_%s_%s"%(procToData(procRVFit),mp,sqrts__,catRVFit)),aset)
   nominalDatasets[mp] = d.Clone()
   if opt.skipVertexScenarioSplit: datasetRVForFit[mp] = d
   else: datasetRVForFit[mp] = splitRVWV(d,aset,mode="RV")
@@ -162,6 +163,7 @@ for mp in opt.massPoints.split(","):
 
 # Check if nominal yield > threshold (or if +ve sum of weights). If not then use replacement proc x cat
 if( datasetRVForFit[MHNominal].numEntries() < opt.replacementThreshold  )|( datasetRVForFit[MHNominal].sumEntries() < 0. ):
+  print(rMap['procRVMap'], rMap['catRVMap'])
   nominal_numEntries = datasetRVForFit[MHNominal].numEntries()
   procReplacementFit, catReplacementFit = rMap['procRVMap'][opt.cat], rMap['catRVMap'][opt.cat]
   for mp in opt.massPoints.split(","):
@@ -261,6 +263,7 @@ if not opt.skipBeamspotReweigh:
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # If using nGaussian fit then extract nGaussians from fTest json file
 if not opt.useDCB:
+  print("%s/outdir_%s/fTest/json/nGauss_%s.json"%(swd__,opt.ext,catRVFit))
   with open("%s/outdir_%s/fTest/json/nGauss_%s.json"%(swd__,opt.ext,catRVFit)) as jf: ngauss = json.load(jf)
   nRV = int(ngauss["%s__%s"%(procRVFit,catRVFit)]['nRV'])
   if opt.skipVertexScenarioSplit: print(" --> Fitting function: convolution of nGaussians (%g)"%nRV)
